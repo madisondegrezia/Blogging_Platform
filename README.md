@@ -60,12 +60,16 @@ Now, when we run our application in development mode, Sequelize will use the cre
 
 ## Usage
 
-To start the application, run the following command in your terminal:
+To start the application, run the following commands in your terminal to start the two development servers for the backend and frontend:
 
 ```
+cd blogging-platform-backend
 npm start
 ```
-
+```
+cd blogging-platform-frontend
+npm run dev
+```
 This will start the server on port 4000 by default. You can access the API using any REST client, such as a ReactJS app, Postman or cURL.
 
 The following endpoints are available:
