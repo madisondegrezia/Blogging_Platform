@@ -96,65 +96,21 @@ Link to Postman Collection: https://www.postman.com/mdegrezia/workspace/blogging
 ## Screenshots
 If a user is not logged in, none of the CRUD operations for posts or comments would be successful, ensuring that only authenticated users can access protected routes.
 
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/79c3f23a-c9f3-47d1-82e5-9f06faa9933c" width=60% height=60%>
+<img src="https://github.com/madisondegrezia/Blogging_Platform/assets/89614960/ee09d1ee-bd6e-4c0a-9690-6fd5e253ddc4" width=60% height=60%>
 
-The above image shows the message and status code that is displayed when an unauthorized user tries to access a protected route.
+The above image shows the login page that is displayed and prompts the user to enter their credentials.
 
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/187e4daf-57bd-4f04-9d9f-7a6f6f73e1bb" width=60% height=60%>
+<img src="https://github.com/madisondegrezia/Blogging_Platform/assets/89614960/48042c2e-506d-4375-97f2-d64547a65bb9" width=60% height=60%>
 
-The above image shows the POST request to login a user.
+The above images shows the error message displayed when a user inputs invalid credentials.
 
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/4e7f8d1d-a42e-4a6c-ba38-a10af516500b" width=60% height=60%>
+<img src="https://github.com/madisondegrezia/Blogging_Platform/assets/89614960/c6c336b0-d59b-4be8-a62a-7ab08fb64616" width=60% height=60%>
 
-The above image shows the DELETE request to logout a user.
+The above image shows the form displayed if the user would like to add a new blog post.
 
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/15a4d05e-1f27-46ea-93f7-6863ba32fe77" width=60% height=60%>
+<img src="https://github.com/madisondegrezia/Blogging_Platform/assets/89614960/f7f38ef2-c840-43c2-be65-084397bd395d" width=60% height=60%> 
 
-The above image shows the GET request to retrieve all posts after logging into an account.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/9746dd0c-84e7-4c19-97f2-031a379c611b" width=60% height=60%>
-
-The above images shows the GET request for a specific post by ID after logging into an account.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/b82e7e0e-a269-41ac-ac59-f4b750273a46" width=60% height=60%>
-
-The above image shows the POST request to create a new post as an authorized user.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/92dc2343-abb1-4b7a-8190-082a4afecc53" width=60% height=60%>
-
-The above image shows the PATCH request to edit a post that the logged in user created.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/626b7887-f9f4-4369-91d1-85aab43d389e" width=60% height=60%>
-
-The above image shows the unsuccessful PATCH request to edit a post that the logged in user did not create.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/3247bc1c-9760-4fad-957d-753a2c23f666" width=60% height=60%>
-
-The above image shows the unsuccessful DELETE request to delete a post that the logged in user did not create.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/11482b97-b094-4509-9692-4bacc86882c0" width=60% height=60%>
-
-The above image shows the DELETE request to delete a post that the logged in user created.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/84974de5-c019-4ca4-b031-2cc209c7db0b" width=60% height=60%>
-
-The above image shows the unsuccessful PATCH request to edit a comment that the logged in user did not create.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/d995e2f2-211d-44f5-a49c-10050772f605" width=60% height=60%>
-
-The above image shows the unsuccessful DELETE request to delete a comment that the logged in user did not create.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/7abefc72-6b9f-4c07-856b-af33d214a58f" width=60% height=60%>
-
-The above image shows the POST request to add a new comment as an authorized user.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/48738d16-0bbc-4f43-8d8a-0c1965d2f846" width=60% height=60%>
-
-The above image shows the PATCH request to edit a comment that the logged in user added.
-
-<img src="https://github.com/madisondegrezia/Assignment10/assets/89614960/8fd20533-f2b0-48a1-9ee4-34222a732bf9" width=60% height=60%>
-
-The above image shows the DELETE request to delete a comment that the logged in user added.
+The above image shows the form displayed if the user would like to edit a pre-existing blog post.
 
 
 
