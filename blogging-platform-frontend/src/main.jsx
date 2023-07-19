@@ -2,13 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Root, {
-  loader as rootLoader,
-  action as logoutAction,
-} from "./routes/root";
+import Root from "./routes/root";
 import ErrorPage from "./ErrorPage";
-import Login, { action as loginAction } from "./routes/auth/Login";
-import Signup, { action as signupAction } from "./routes/auth/Signup";
+import Login from "./routes/auth/Login";
+import Signup from "./routes/auth/Signup";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AuthProvider from "./contexts/AuthContext";
 import PostList, { loader as postLoader } from "./routes/posts/PostList";
@@ -18,8 +15,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
-    loader: rootLoader,
-    action: logoutAction,
     children: [
       {
         index: true,
@@ -32,13 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
-        action: loginAction,
+        element: <Login />
       },
       {
         path: "/signup",
-        element: <Signup />,
-        action: signupAction,
+        element: <Signup />
       },
     ],
   },

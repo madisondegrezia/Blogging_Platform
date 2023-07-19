@@ -1,35 +1,34 @@
-import { Form, redirect, Navigate } from "react-router-dom";
+import { Form, Navigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+import { FaUser } from "react-icons/fa";
 
-export async function action({ request }) {
-  const formData = await request.formData();
+function Login() {
+  const { currentUser, login, authError } = useContext(AuthContext);
 
-  const response = await fetch("/api/auth/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(Object.fromEntries(formData)),
-  });
-
-  if (!response.ok) {
-    return null;
-  }
-
-  return redirect("/");
-}
-
-export default function Login() {
-  const { currentUser, authError } = useContext(AuthContext);
   if (currentUser) {
     return <Navigate to="/" />;
   }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const credentials = Object.fromEntries(formData);
+    await login(credentials);
+  };
+
   return (
-    <Form method="post" className="selection:bg-blue-200 flex flex-col gap-2">
-      <h1 className="text-white">Login</h1>
-      
-      {authError && <div className="text-red-300">{authError}</div>}
+    <Form
+      onSubmit={handleSubmit}
+      className="selection:bg-blue-200 flex flex-col gap-2"
+    >
+      <h1 className="text-2xl font-bold pt-3 pb-3 flex flex-row items-center">
+        Login
+        <FaUser />
+      </h1>
+
+      {authError && <div className="text-red-500">{authError}</div>}
+
       <fieldset className="flex flex-col">
         <label htmlFor="title">Email</label>
         <input
@@ -55,3 +54,5 @@ export default function Login() {
     </Form>
   );
 }
+
+export default Login;
