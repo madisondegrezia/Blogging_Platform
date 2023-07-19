@@ -9,6 +9,15 @@ import Signup from "./routes/auth/Signup";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AuthProvider from "./contexts/AuthContext";
 import PostList, { loader as postLoader } from "./routes/posts/PostList";
+import Post, { loader as postDetailLoader } from "./routes/posts/post";
+import AddPost, {
+  action as addPostAction,
+  loader as addPostLoader,
+} from "./routes/posts/AddPost";
+import EditPost, {
+  loader as editPostLoader,
+  action as editPostAction,
+} from "./routes/posts/EditPost";
 
 const router = createBrowserRouter([
   {
@@ -27,11 +36,42 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />
+        element: <Login />,
       },
       {
         path: "/signup",
-        element: <Signup />
+        element: <Signup />,
+      },
+      {
+        path: "posts/:id",
+        element: (
+          <ProtectedRoute>
+            <Post />
+          </ProtectedRoute>
+        ),
+        errorElement: <ErrorPage />,
+        loader: postDetailLoader,
+      },
+      {
+        path: "posts/new",
+        element: (
+          <ProtectedRoute>
+            <AddPost />
+          </ProtectedRoute>
+        ),
+        action: addPostAction,
+        loader: addPostLoader,
+      },
+      {
+        path: "posts/:id/edit",
+        element: (
+          <ProtectedRoute>
+            <EditPost />
+          </ProtectedRoute>
+        ),
+        errorElement: <ErrorPage />,
+        loader: editPostLoader,
+        action: editPostAction,
       },
     ],
   },

@@ -4,7 +4,7 @@ const { Post } = require("../models");
 const { authenticateUser } = require("../middleware/auth");
 
 // Get all the posts
-router.get("/posts", authenticateUser, async (req, res) => {
+router.get("/", authenticateUser, async (req, res) => {
   try {
     const allPosts = await Post.findAll();
 
@@ -16,7 +16,7 @@ router.get("/posts", authenticateUser, async (req, res) => {
 });
 
 // Get a specific post
-router.get("/posts/:id", authenticateUser, async (req, res) => {
+router.get("/:id", authenticateUser, async (req, res) => {
   const postId = parseInt(req.params.id, 10);
 
   try {
@@ -34,7 +34,7 @@ router.get("/posts/:id", authenticateUser, async (req, res) => {
 });
 
 // Create a new post
-router.post("/posts", authenticateUser, async (req, res) => {
+router.post("/", authenticateUser, async (req, res) => {
   try {
     const newPost = await Post.create(req.body);
 
@@ -49,7 +49,7 @@ router.post("/posts", authenticateUser, async (req, res) => {
 });
 
 // Update a specific post
-router.patch("/posts/:id", authenticateUser, async (req, res) => {
+router.patch("/:id", authenticateUser, async (req, res) => {
   const postId = parseInt(req.params.id, 10);
 
   try {
@@ -79,7 +79,7 @@ router.patch("/posts/:id", authenticateUser, async (req, res) => {
 });
 
 // Delete a specific post
-router.delete("/posts/:id", authenticateUser, async (req, res) => {
+router.delete("/:id", authenticateUser, async (req, res) => {
   const postId = parseInt(req.params.id, 10);
 
   try {
